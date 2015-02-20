@@ -1,0 +1,10 @@
+body {
+	display:flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.wrap {
+	flex-grow:1;
+	padding:40px;
+}

@@ -1,1 +1,17 @@
-.content-info { }
+.copyright {
+	text-align: center;
+	line-height:90px;
+	margin:0;
+	color:white;
+	font-weight:lighter;
+	vertical-align:middle;
+
+	img {
+		vertical-align: inherit;
+	}
+}
+
+footer {
+	height:90px;
+	background:#303030;
+}

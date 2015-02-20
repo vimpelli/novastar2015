@@ -1,0 +1,1 @@
+!function($){var n={common:{init:function(){}},home:{init:function(){}},about_us:{init:function(){}}},i={fire:function(i,o,t){var c=n;o=void 0===o?"init":o,""!==i&&c[i]&&"function"==typeof c[i][o]&&c[i][o](t)},loadEvents:function(){i.fire("common"),$.each(document.body.className.replace(/-/g,"_").split(/\s+/),function(n,o){i.fire(o)})}};$(document).ready(i.loadEvents)}(jQuery);
