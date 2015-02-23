@@ -5,6 +5,38 @@ body {
 }
 
 .wrap {
+	//display:flex;
 	flex-grow:1;
+}
+
+.content_frame {
+	// flex-grow:1;
+	max-width:2000px;
+	margin:0 auto;
+	display:flex;
+	flex-flow:row wrap;
 	padding:40px;
+}
+
+a {
+	color:$primary;
+}
+
+.content {
+	flex-grow:12;
+	padding:30px;
+	display:inline-block;
+	background-image:url(/wp-content/uploads/background.jpg);
+	background-size:cover;
+	background-position:right;
+}
+
+@media (min-width:850px) {
+	.content {
+		margin-left:40px;
+	}
+}
+
+.container-fluid {
+	width:100%;
 }

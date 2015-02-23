@@ -7,18 +7,16 @@
     </div>
   <![endif]-->
   
-  <div class="wrap container-fluid" role="document">
-    <div class="content row">
-      <main class="main" role="main">
+  <div class="wrap" role="document">
+    <div class="content_frame">
+      <header class="intro-container" role="complementary">
+       <?php include roots_sidebar_path(); ?>
+      </header>
+      <main class="content" role="main">
         <?php include roots_template_path(); ?>
-      </main><!-- /.main -->
-      <?php if (roots_display_sidebar()) : ?>
-        <aside class="sidebar" role="complementary">
-          <?php include roots_sidebar_path(); ?>
-        </aside><!-- /.sidebar -->
-      <?php endif; ?>
-    </div><!-- /.content -->
-  </div><!-- /.wrap -->
+      </main>
+    </div>
+  </div>
 
   <?php get_template_part('templates/footer'); ?>
 
