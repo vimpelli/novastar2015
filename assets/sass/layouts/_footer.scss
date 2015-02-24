@@ -2,7 +2,7 @@
 	text-align: center;
 	line-height:90px;
 	margin:0;
-	color:white;
+	color:$gray;
 	font-weight:lighter;
 	vertical-align:middle;
 
@@ -15,3 +15,11 @@ footer {
 	height:90px;
 	background:$gray-base;
 }
+
+// @media (min-width:700px) {
+// 	footer {
+// 		position:fixed;
+// 		width:100%;
+// 		bottom:0;
+// 	}
+// }

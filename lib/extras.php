@@ -20,3 +20,19 @@ function roots_wp_title($title) {
   return $title;
 }
 add_filter('wp_title', 'roots_wp_title', 10);
+
+/**
+* Creates a sidebar
+* @param string|array  Builds Sidebar based off of 'name' and 'id' values.
+*/
+$args = array(
+	'name'          => __( 'Header Left'),
+	'description'   => 'This is the area directly to the left of the logo',
+	'class'         => 'header-left',
+	'before_widget' => '<div class="header_flex_child header-left">',
+	'after_widget'  => '</div>',
+	'before_title'  => '',
+	'after_title'   => ''
+);
+
+register_sidebar( $args );

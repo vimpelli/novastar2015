@@ -1,77 +1,172 @@
-/* STYLESHEET FOR LOGO AND NAV CONTAINER
+/* STYLESHEET FOR HEADER AND NAV
 ---------------------------------------- */
-header.intro-container {
-	display:inline-block;
+header.navbar {
+	z-index:10;	
+	padding:5px;
+	height:70px;
+	position: relative;
+	background:$gray-lighter;
+	display:flex;
+	font-weight:300;
+	color:$gray;
 	text-align: center;
-	flex-grow:1;
-	//width:200px;
-}
-
-.logo-container {
-	margin-bottom:20px;
-
-	.logo {
-		width:100%;
-		margin-bottom: 20px;
-	}
-
-	hr {
-		margin:0 auto;
-		width:85%;
-		border-width:2px;
-		border-color: $primary;
-	}
-}
-
-ul.menu {
-	padding:0;
-
-	li {
-		width:80%;
-		position:relative;
-		display: block;
-		margin:5px auto;
-		padding:10px;
-	}
+	font-size:18px;
 
 	a {
-		font-size: 16px;
-		font-weight: 300;
-		letter-spacing: 1px;
-		display: inline-block;
-		transition: 0.2s all;
-	}
-
-	li:hover {
-		background:$secondcolor;
-		transform: skew(-10deg,0deg);
-		transition: 0.5s transform;
-
-		a {
-			transform: skew(10deg,0deg);
-			text-decoration: none;
-			color:$gray-lighter;
-		}
-	}
-
-	li.active {
-		transform: skew(-10deg,0deg);
-		background:$secondcolor;
-	}
-
-	li.active a {
-		transform: skew(10deg,0deg);
-		color:$gray-lighter;
+		text-decoration: none;
 	}
 }
 
-@media (max-width:500px) {
-	ul.menu {
+// WIDGET AREA TO THE LEFT OF THE LOGO
+.header_flex_child {
+	width:(100% / 3);
+	flex:1;
+}
+
+.header-left {
+	display:flex;
+	align-items:center;
+	text-align: center;
+
+	div {
+		margin:auto;
+	}
+
+	p {
+		margin:0;
+	}
+}
+
+// THE LOGO CONTAINER AND LOGO
+.logo-container {
+	img {
+		margin:auto;
+		position: relative;
+		z-index: 1;
+	}
+}
+
+#triangle {
+	position: relative;
+	margin:auto;
+	z-index:0;
+	margin-top:-100px;
+	width:200px;
+	height:200px;
+	background:$gray-lighter;
+	transform: matrix(1,0.3,-1,0.3,0,0);
+}
+
+$menu-color:$primary;
+
+.main-nav {
+	display:flex;
+	
+	ul.nav {
+		display: flex;
+		align-items: center;
+		flex:2;
+		margin:0;
+		padding:0;
+
 		li {
-			display:none;
+			flex:1;
+			display: flex;
+			transition: background 0.3s;
+			margin-right: 5px;
+			line-height: 70px;
+
+			a {
+				flex:1;
+				color:$secondcolor;
+				transition: all 0.3s;
+			}
+
+			a:hover {
+				text-decoration: none;
+				color:$secondcolor;
+				transition: all 0.3s;
+				background:$menu-color;
+			}
 		}
-		li:first-child {
-			display:block;
+		li.active {
+			a {
+				background:$menu-color;
+				//color:$gray-lighter;
+			}
+
+			ul.dropdown-menu {
+				li {
+					padding:0;
+					margin:0;
+				}
+				a {
+					background:none;
+					color:$gray;
+				}
+				a:hover {
+					background:$menu-color;
+					color:$gray-lighter;
+				}
+				a:active {
+					background:$menu-color;
+				}
+			}
+		}
+	}
+	ul.dropdown-menu {
+		border:none;
+		border-bottom: 5px solid $menu-color;
+		box-shadow:none;
+		background:$gray-lighter;
+		border-radius:0px;
+		margin:0;
+		li {
+			a {
+				color:$gray !important;
+				line-height: 2em;
+			}
 		}
 	}
 }
+
+/* HEADER MEDIA QUERIES
+---------------------------------------- */
+@media (max-width:1199px) {
+
+header.navbar {
+	background:white;
+	//display:block; for non-flex browsers
+	height:auto;
+	flex-flow:column;
+	padding:15px 0 0 0;
+	font-size:14px;
+}
+
+#triangle {
+	display:none;
+}
+
+.header_flex_child {
+	width:100%;
+}
+
+.main-nav {
+	height:50px;
+	background:$gray-lighter;
+	margin-top: 30px;
+	width:100%;
+
+	li {
+		line-height: 50px !important;
+	}
+
+	a { 
+		//line-height: 50px !important;
+		padding:0 10px;
+		white-space: nowrap;
+	}
+}
+
+}
+

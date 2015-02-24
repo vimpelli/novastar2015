@@ -12,25 +12,25 @@ $grid-gutter-width:         30px;
 $screen-xs:                  480px;
 
 // Small screen / tablet
-$screen-sm:                  768px;
+$screen-sm:                  1024px;
 
 // Medium screen / desktop
-$screen-md:                  992px;
+$screen-md:                  1200px;
 
 // Large screen / wide desktop
-$screen-lg:                  1200px;
+$screen-lg:                  1800px;
 
 //== Container sizes
 //
 //## Define the maximum width of `.container` for different screen sizes.
 // Small screen / tablet
-$container-tablet:             (720px + $grid-gutter-width);
+$container-tablet:             (1024px + $grid-gutter-width);
 
 // Medium screen / desktop
-$container-desktop:            (940px + $grid-gutter-width);
+$container-desktop:            (1200px + $grid-gutter-width);
 
 // Large screen / wide desktop
-$container-large-desktop:      (1140px + $grid-gutter-width);
+$container-large-desktop:      (1800px + $grid-gutter-width);
 
 
 /* COLORS
@@ -38,9 +38,9 @@ $container-large-desktop:      (1140px + $grid-gutter-width);
 $gray-base:       #303030;
 $gray-darker:     lighten($gray-base, 13.5%);
 $gray-dark:       lighten($gray-base, 20%);
-$gray:            lighten($gray-base, 33.5%);
-$gray-light:      lighten($gray-base, 46.7%);
-$gray-lighter:    lighten($gray-base, 93.5%);
+$gray:            lighten($gray-base, 30%);
+$gray-light:      lighten($gray-base, 50%);
+$gray-lighter:    lighten($gray-base, 70%);
 
 $primary:         #99A7BF; // light blue 
 $secondcolor:     #163061; // darker blue
@@ -61,7 +61,7 @@ $font-size-base:          14px;
 $font-size-large:         ceil(($font-size-base * 1.25)); // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)); // ~12px
 
-$font-size-h1:            floor(($font-size-base * 2.6)); // ~36px
+$font-size-h1:            floor(($font-size-base * 3)); // ~36px
 $font-size-h2:            floor(($font-size-base * 2.15)); // ~30px
 $font-size-h3:            ceil(($font-size-base * 1.7)); // ~24px
 $font-size-h4:            ceil(($font-size-base * 1.25)); // ~18px
@@ -74,6 +74,6 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
 $headings-font-family:    inherit;
-$headings-font-weight:    500;
+$headings-font-weight:    300;
 $headings-line-height:    1.1;
-$headings-color:          inherit;
+$headings-color:          $gray-darker;
