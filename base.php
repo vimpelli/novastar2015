@@ -11,15 +11,10 @@
     get_template_part('templates/header');
   ?>
 
-  <div class="wrap container" role="document">
-    <div class="content_frame row">
-      <header class="intro-container" role="complementary">
-       <?php include roots_sidebar_path(); ?>
-      </header>
-      <main class="content" role="main">
-        <?php include roots_template_path(); ?>
-      </main>
-    </div>
+  <div class="wrap" role="document">
+    <main class="content container" role="main">
+      <?php include roots_template_path(); ?>
+    </main>
   </div>
 
   <?php get_template_part('templates/footer'); ?>

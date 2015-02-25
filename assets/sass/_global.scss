@@ -5,18 +5,14 @@ body {
 }
 
 .wrap {
-	background:$gray;
-	//display:flex;
+	margin-top: 30px;
+	display:flex;
 	flex-grow:1;
 }
 
-.content_frame {
-	// flex-grow:1;
-	max-width:2000px;
-	margin:0 auto;
+.content {
 	display:flex;
-	flex-flow:row wrap;
-	padding:40px;
+	flex-flow:column
 }
 
 a {
@@ -25,4 +21,14 @@ a {
 
 .container-fluid {
 	width:100%;
+}
+
+.aligncenter {
+	text-align: center;
+}
+
+/* TYPOGRAPHY
+---------------------------------------- */
+p {
+	font-weight:300;
 }

@@ -1,0 +1,67 @@
+.home-hero {
+	position: relative;
+	flex:1;
+	display:flex;
+
+	.col {
+		position: relative;
+		flex:1;
+		display: flex;
+		flex-flow: column;
+
+		.block {
+			display: flex;
+			overflow: hidden;
+			position: relative;
+			flex:1;
+			background: $secondcolor;
+			padding:30px;
+			margin-bottom: 30px;
+			color:$gray-lighter;
+			box-sizing:border-box;
+		}
+
+		section {
+			padding:0 15px;
+			border:2px solid white;
+		}
+
+		a {
+			position: absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+		}
+	}
+}
+
+figure.service {
+	display:flex;
+	flex:1;
+	background-image:url(/wp-content/uploads/demo1.jpg);
+	padding:15px;
+
+	h2{
+		text-align: center;
+		color:$gray-darker;
+	}
+	p {
+		color:$gray-darker;
+		font-weight: bold;
+	}
+
+	&:hover {
+		background:blue !important;
+	}
+}
+
+
+/* HOME PAGE MEDIA QUERIES
+---------------------------------------- */
+
+@media (max-width:800px) {
+	.home-hero {
+		display:block;
+	}
+}
