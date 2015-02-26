@@ -2,9 +2,13 @@ body {
 	display:flex;
 	min-height:100vh;
 	flex-direction: column;
+	// background-image:url(http://novastar.dev/wp-content/uploads/background.jpg);
+	// background-repeat:no-repeat;
+	// background-size:cover;
 }
 
 .wrap {
+
 	margin-top: 30px;
 	display:flex;
 	flex-grow:1;
