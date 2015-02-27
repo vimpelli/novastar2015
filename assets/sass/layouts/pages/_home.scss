@@ -1,22 +1,28 @@
-// DEFINES THE SPACE BETWEEN THE BLOCKS, AND THE SIZE OF THE BLOCKS
-$margin: 30px;
+$margin: 30px;// DEFINES THE SPACE BETWEEN THE BLOCKS, AND THE SIZE OF THE BLOCKS
 
 .home-tagline {
   margin-bottom: 30px;
 }
 
 .home-hero {
-	position: relative;
+  flex:1;
+  display: flex;
+  position: relative;
 
 	.col {
+    flex:1;
+    display: flex;
+    flex-flow: column;
 		position: relative;
 
 		.block {
+      display: flex;
+      flex:1;
 			overflow: hidden;
 			position: relative;
 			background-position:center center !important;
+      background-size:cover !important;
 			background: $secondcolor;
-			padding:30px;
 			margin-bottom: $margin;
 			color:$gray-lighter;
 		}
@@ -24,37 +30,41 @@ $margin: 30px;
 
 	.col-1 {
 		.block {
-			height: 500px;
+			// height: 500px;
 		}
     .zoom {
-      line-height: (500px - $margin * 2);
+      // line-height: (500px - $margin * 2);
     }
 	}
 	.col-2 {
 		.block {
-			height: ((500px - $margin) / 2);
+			// height: ((500px - $margin) / 2);
 		}
     .zoom {
-      line-height: ((500px - $margin * 4) / 2);
+      // line-height: ((500px - $margin * 4) / 2);
     }
 	}
 	.col-3 {
 		.block {
-			height: ((500px - $margin * 2) / 3);
+			// height: ((500px - $margin * 2) / 3);
 		}
     .zoom {
-      line-height: ((500px - $margin * 6) / 3);
+      // line-height: ((500px - $margin * 6) / 3);
     }
 	}
 }
 
 figure {
+  position: relative;
+  flex:1;
+  display: flex;
+  align-items:center;
 	background:rgba(169, 182, 203, 0.4);
-	position: absolute;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
+	// position: absolute;
+	// top:0;
+	// left:0;
+	// width:100%;
+	// height:100%;
 
 	figcaption > a {
 		z-index: 600;
@@ -62,6 +72,7 @@ figure {
 	}
 
   figcaption {
+    flex:1;
     padding: 30px;
     backface-visibility: hidden;
 
@@ -101,7 +112,6 @@ figure.service {
 
   h2 {
     text-align: center;
-    letter-spacing: -2px;
     color:black;
     font-weight: 400;
   	text-transform: uppercase;
@@ -117,16 +127,13 @@ figure.service {
   }
 
   .zoom {
-    position: absolute;
-    top:0;
-    left:0;
     margin:0;
-    height:100%;
-    width: 100%;
-  	color:white;
-    font-size: 180px;
-  	font-weight: 700;
-    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    color:white;
+    font-size: 80px;
     opacity: 0;
     transition: opacity 0.35s, transform 0.35s;
     transform: scale(2.5);
@@ -140,17 +147,19 @@ figure.service {
       transform: scale(0.9);
     }
 
-    figcaption::before, .zoom {
+    figcaption::before{
       opacity: 1;
       transform: scale3d(1, 1, 1);
     }
 
-    figcaption {
-      background-color: rgba(58, 52, 42, 0);
+    .zoom {
+      opacity: 1;
+      // transform: scale3d(1, 1, 1);
+      transform: translate(-50%, -50%);
     }
 
-    img {
-      opacity: 0.4;
+    figcaption {
+     background-color: rgba(58, 52, 42, 0);
     }
   }
 }

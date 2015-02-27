@@ -54,7 +54,7 @@ $danger:          #d9534f;
 
 /* TYPOGRAPHY
 ---------------------------------------- */
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans-serif:  Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-base:        $font-family-sans-serif;
 
 $font-size-base:          16px;
@@ -73,7 +73,7 @@ $line-height-base:        1.428571429; // 20/14
 $line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
-$headings-font-family:    Monda, Helvetica, Arial, sans-serif;
+$headings-font-family:    Lato, Helvetica, Arial, sans-serif;
 $headings-font-weight:    300;
 $headings-line-height:    1.1;
 $headings-color:          $gray-darker;

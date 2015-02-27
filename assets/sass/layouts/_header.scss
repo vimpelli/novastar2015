@@ -1,6 +1,5 @@
 /* STYLESHEET FOR HEADER AND NAV
 ---------------------------------------- */
-
 $nav-height: 70px;
 
 header.navbar {	
@@ -8,7 +7,7 @@ header.navbar {
 	max-width:2000px;
 	width:100%;
 	margin:0 auto;
-	padding:5px;
+	// padding:5px;
 	height:$nav-height;
 	position: relative;
 	background:$gray-lighter;
@@ -46,7 +45,8 @@ header.navbar {
 // THE LOGO CONTAINER AND LOGO
 .logo-container {
 	img {
-		margin:auto;
+		width:260px;
+		margin:5px auto 0 auto;
 		position: relative;
 		z-index: 100;
 		transition: 0.3s transform;
@@ -77,25 +77,28 @@ $menu-color:$primary;
 
 	// MAIN NAV UL
 	ul.nav {
+		position: relative;
 		display: flex;
-		align-items: center;
-		flex:2;
+		flex:1;
 		margin:0;
 		padding:0;
 
 		// MAIN NAV ITEMS
 		li {
 			position: relative;
+			align-items:center;
 			flex:1;
 			display: flex;
-			transition: background 0.3s;
+			box-sizing:border-box;
 			line-height: $nav-height;
 
-			a {
+			a {	
+				width:100%;
 				flex:1;
+				// line-height: $nav-height - 7px;
 				text-transform: uppercase;
-				vertical-align: middle;
 				color:$secondcolor;
+				white-space: nowrap;
 
 				&::before, &::after {
 					font-size:20px;
@@ -128,27 +131,31 @@ $menu-color:$primary;
 			}
 		}
 
-
-		li:hover {
-			// background:$menu-color;
+		li.active > a {
+			&::before {
+				opacity: 1;
+				margin-right: 10px;
+				content: '[';
+				transform: translateX(0px);
+			}
+			&::after {
+				opacity: 1;
+				margin-left: 10px;
+				content: ']';
+				transform: translateX(0px);
+			}
 		}
 
-		// li.active {
-		// 	@extend li:hover
-		// }
+		.caret {
+			// display: none;
+		}
 
 		// DROPDOWN MENU CONTAINER
-		ul.dropdown-menu { 
-			visibility: hidden;
-			opacity: 0;
+		ul.dropdown-menu {
 			padding:0;
-			border-top: 5px solid $menu-color;
+			border-bottom: 5px solid $menu-color;
 			background:$gray-lighter;
-			position: absolute;
-			left:0;
 			top:$nav-height;
-			transition: 0.3s all;
-			z-index: 1000;
 
 			// DROPDOWN MENU ITEMS
 			a {
@@ -160,19 +167,21 @@ $menu-color:$primary;
 				display:block;
 			}
 		}
-		li.dropdown:hover ul.dropdown-menu {
-			visibility: visible;
-			opacity: 1;
-			height:auto;
-			transition: 0.3s opacity, height;
-		}
 	}
 }
 
+.dropdown-menu > .active > a {
+	&, &:hover, &:focus {
+		color: $dropdown-link-active-color;
+		text-decoration: none;
+		outline: 0;
+		background-color:transparent;
+	}
+}
 
 /* HEADER MEDIA QUERIES
 ---------------------------------------- */
-@media (max-width:1199px) { /* ------- 1199px --------- */
+@media (max-width:1199px) { /* ------- 1310px --------- */
 
 header.navbar {
 	background:white;
@@ -196,18 +205,51 @@ header.navbar {
 	margin-top: 30px;
 	width:100%;
 
-	li {
-		line-height: $nav-height - 20 !important;
-	}
-
 	a { 
 		padding:0 10px;
 		white-space: nowrap;
 	}
 	// MAIN NAV UL FOR MOBILE
 	ul.nav {
-		position: relative;
-		z-index: 100;
+
+		ul.dropdown-menu {
+			left:0;
+			top:$nav-height - 2;
+			width:100% !important;
+			min-width:150px;
+			border:none;
+			border-bottom:5px solid $secondcolor;
+
+			a {
+				font-size: $font-size-small;
+				text-align: center;
+			}
+		}
+	}
+}
+
+}
+
+@media (max-width:800px) { /* ------- 800px --------- */
+
+
+.main-nav {
+	display:block;
+	height:auto;
+	background:$gray-lighter;
+	margin-top: 30px;
+	width:100%;
+
+	li {
+		line-height: $nav-height - 20 !important;
+	}
+
+	a { 
+		white-space: nowrap;
+	}
+
+	// MAIN NAV UL FOR MOBILE
+	ul.nav {
 		display: block;
 
 		li,a {
@@ -216,32 +258,6 @@ header.navbar {
 
 		li:nth-child(2n+0) {
 			background:$gray-lighter - 30;
-		}
-
-		ul.dropdown-menu {
-			display:none;
-			position: relative;
-			left:0;
-			top:0;
-			width:100% !important;
-			min-width:150px;
-			border-bottom:5px solid $secondcolor;
-
-			li {
-				height:0;
-			}
-			a {
-				font-size: $font-size-small;
-				text-align: center;
-			}
-		}
-		li.dropdown:hover {
-			ul.dropdown-menu {
-				display: block;
-				li {
-					height:auto;
-				}
-			}	
 		}
 	}
 }
@@ -252,7 +268,7 @@ header.navbar {
 
 .logo-container {
 	padding-bottom: 30px;
-	border-bottom: 5px solid $secondcolor;
+	
 	img {
 		margin:auto;
 		position: relative;

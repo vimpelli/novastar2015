@@ -36,3 +36,14 @@ $args = array(
 );
 
 register_sidebar( $args );
+
+// Wrap up function for responsive image swapping from the RICG plugin 
+function imgswap($id, $size) {
+
+	// If plugin is active, do this, if not, don't break everything to pieces
+	if (function_exists('tevkori_get_srcset_string')) {
+		$source = tevkori_get_srcset_string( $id, $size );
+		echo $source;
+	}
+	
+}

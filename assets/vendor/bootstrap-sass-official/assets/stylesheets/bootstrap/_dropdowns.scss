@@ -30,20 +30,22 @@
   position: absolute;
   top: 100%;
   left: 0;
+  opacity: 0;
   z-index: $zindex-dropdown;
-  display: none; // none by default, but block on "open" of the menu
+  // display: none; // none by default, but block on "open" of the menu
+  visibility: hidden;
   float: left;
-  min-width: 160px;
+  // min-width: 160px;
   padding: 5px 0;
-  margin: 2px 0 0; // override default ul
+  // margin: 2px 0 0; // override default ul
   list-style: none;
   font-size: $font-size-base;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   background-color: $dropdown-bg;
-  border: 1px solid $dropdown-fallback-border; // IE8 fallback
-  border: 1px solid $dropdown-border;
-  border-radius: $border-radius-base;
-  @include box-shadow(0 6px 12px rgba(0,0,0,.175));
+  // border: 1px solid $dropdown-fallback-border; // IE8 fallback
+  // border: 1px solid $dropdown-border;
+  // border-radius: $border-radius-base;
+  // @include box-shadow(0 6px 12px rgba(0,0,0,.175));
   background-clip: padding-box;
 
   // Aligns the dropdown menu to right
@@ -77,7 +79,8 @@
   &:focus {
     text-decoration: none;
     color: $dropdown-link-hover-color;
-    background-color: $dropdown-link-hover-bg;
+    // background-color: $dropdown-link-hover-bg;
+    transition: 0.3s all;
   }
 }
 
@@ -119,7 +122,10 @@
 .open {
   // Show the menu
   > .dropdown-menu {
-    display: block;
+    // display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3s all;
   }
 
   // Remove the outline when :focus is triggered

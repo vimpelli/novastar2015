@@ -6,14 +6,11 @@
 			<figure class="service">
 				<figcaption>
 					<h2>Calibration</h2>
-						<p>
-							ISO/IEC 17025:2005 accreditation
-							Cost-effective solutions
-							On-site calibrations
-						</p>
-					<h2 class="zoom">+</h2>
+					<p>Instrumental calibration services to industry, test labs, education, public sector (Defense)</p>
+					<p>Instrumental calibration services to industry, test labs, education, public sector (Defense)</p>
 					<a href="/calibration"></a>
-				</figcaption>			
+				</figcaption>
+				<i class="fa fa-info zoom"></i>		
 			</figure>
 			<!-- <a href="#"></a> -->
 		</div>
@@ -23,14 +20,10 @@
 			<figure class="service">
 				<figcaption>
 					<h2>New Hardware</h2>
-						<p>
-							ISO/IEC 17025:2005 accreditation
-							Cost-effective solutions
-							On-site calibrations
-						</p>
-					<h2 class="zoom">+</h2>
+					<p>Instrumental calibration services to industry, test labs, education, public sector (Defense)</p>
 					<a href="/calibration"></a>
-				</figcaption>			
+				</figcaption>	
+				<i class="fa fa-info zoom"></i>		
 			</figure>
 		<a href="#"></a>
 		</div>
@@ -40,9 +33,9 @@
 				<figcaption>
 					<h2>Software</h2>
 					<p>Instrumental calibration services to industry, test labs, education, public sector (Defense)</p>
-					<h2 class="zoom">+</h2>
 					<a href="/calibration"></a>
-				</figcaption>			
+				</figcaption>
+				<i class="fa fa-info zoom"></i>				
 			</figure>
 		</div>
 	</div>
@@ -51,26 +44,30 @@
 			<figure class="service">
 				<figcaption>
 					<h2>Services</h2>
-					<a href="/calibration">View more</a>
-					<h2 class="zoom">+</h2>
+					<p>Instrumental calibration services.</p>
 					<a href="/calibration"></a>
-				</figcaption>			
+				</figcaption>
+			<i class="fa fa-info zoom"></i>			
 			</figure>
 		</div>
 		<div class="block" style="background-image:url(/wp-content/uploads/demo5.jpeg);">
 			<figure class="service">
 				<figcaption>
 					<h2>Re-Marketing</h2>
+					<p>Instrumental calibration services.</p>
 					<a href="/calibration"></a>
-				</figcaption>			
+				</figcaption>
+				<i class="fa fa-info zoom"></i>			
 			</figure>
 		</div>
 		<div class="block" style="background-image:url(/wp-content/uploads/demo3.jpeg);">
 			<figure class="service">
 				<figcaption>
 					<h2>Used Sales</h2>
+					<p>Instrumental calibration services.</p>
 					<a href="/calibration"></a>
-				</figcaption>			
+				</figcaption>
+				<i class="fa fa-info zoom"></i>			
 			</figure>
 		</div>
 	</div>
