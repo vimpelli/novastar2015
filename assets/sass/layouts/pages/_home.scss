@@ -5,14 +5,9 @@ $margin: 30px;// DEFINES THE SPACE BETWEEN THE BLOCKS, AND THE SIZE OF THE BLOCK
 }
 
 .home-hero {
-  flex:1;
-  display: flex;
   position: relative;
 
 	.col {
-    flex:1;
-    display: flex;
-    flex-flow: column;
 		position: relative;
 
 		.block {
@@ -27,44 +22,50 @@ $margin: 30px;// DEFINES THE SPACE BETWEEN THE BLOCKS, AND THE SIZE OF THE BLOCK
 			color:$gray-lighter;
 		}
 	}
+}
+
+@media (min-width:800px) {
+
+  figure {
+    position: absolute;
+  }
+
+  $height: 700px;
 
 	.col-1 {
 		.block {
-			// height: 500px;
+			height: $height;
 		}
     .zoom {
-      // line-height: (500px - $margin * 2);
+      line-height: ($height - $margin * 2);
     }
 	}
 	.col-2 {
 		.block {
-			// height: ((500px - $margin) / 2);
+			height: (($height - $margin) / 2);
 		}
     .zoom {
-      // line-height: ((500px - $margin * 4) / 2);
+      line-height: (($height - $margin * 4) / 2);
     }
 	}
 	.col-3 {
 		.block {
-			// height: ((500px - $margin * 2) / 3);
+			height: (($height - $margin * 2) / 3);
 		}
     .zoom {
-      // line-height: ((500px - $margin * 6) / 3);
+      line-height: (($height - $margin * 6) / 3);
     }
 	}
 }
 
+
 figure {
-  position: relative;
+  width: 100%;
+  height:100%;
   flex:1;
   display: flex;
   align-items:center;
 	background:rgba(169, 182, 203, 0.4);
-	// position: absolute;
-	// top:0;
-	// left:0;
-	// width:100%;
-	// height:100%;
 
 	figcaption > a {
 		z-index: 600;

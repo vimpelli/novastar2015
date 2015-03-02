@@ -1,20 +1,20 @@
 /* STYLESHEET FOR HEADER AND NAV
 ---------------------------------------- */
 $nav-height: 70px;
+$nav-padding: 5px;
 
 header.navbar {	
 	z-index:1000;
-	max-width:2000px;
+	max-width:$max-width;
 	width:100%;
 	margin:0 auto;
-	// padding:5px;
-	height:$nav-height;
+	padding:$nav-padding;
 	position: relative;
 	background:$gray-lighter;
-	display:flex;
 	font-weight:300;
 	color:$gray;
 	text-align: center;
+	height:$nav-height + ($nav-padding * 2);
 	font-size:$font-size-base;
 
 	a {
@@ -24,29 +24,31 @@ header.navbar {
 
 // WIDGET AREA TO THE LEFT OF THE LOGO
 .header_flex_child {
+	position: relative;
+	display:inline-block;
 	width:(100% / 3);
-	flex:1;
+	float:left;
+	// height:$nav-height;
 }
 
 .header-left {
-	display:flex;
-	align-items:center;
-	text-align: right;
 
 	div {
 		margin:auto;
 	}
 
 	p {
+		line-height: $nav-height;
+		vertical-align: middle;
 		margin:0;
 	}
 }
 
 // THE LOGO CONTAINER AND LOGO
 .logo-container {
+	// position: relative;
 	img {
 		width:260px;
-		margin:5px auto 0 auto;
 		position: relative;
 		z-index: 100;
 		transition: 0.3s transform;
@@ -73,22 +75,17 @@ $menu-color:$primary;
 
 // MAIN NAV CONTAINER
 .main-nav {
-	display:flex;
 
 	// MAIN NAV UL
 	ul.nav {
 		position: relative;
-		display: flex;
-		flex:1;
 		margin:0;
 		padding:0;
 
 		// MAIN NAV ITEMS
 		li {
 			position: relative;
-			align-items:center;
-			flex:1;
-			display: flex;
+			display: inline-block;
 			box-sizing:border-box;
 			line-height: $nav-height;
 
@@ -146,10 +143,6 @@ $menu-color:$primary;
 			}
 		}
 
-		.caret {
-			// display: none;
-		}
-
 		// DROPDOWN MENU CONTAINER
 		ul.dropdown-menu {
 			padding:0;
@@ -181,7 +174,7 @@ $menu-color:$primary;
 
 /* HEADER MEDIA QUERIES
 ---------------------------------------- */
-@media (max-width:1199px) { /* ------- 1310px --------- */
+@media (max-width:1220px) { 
 
 header.navbar {
 	background:white;
@@ -212,6 +205,10 @@ header.navbar {
 	// MAIN NAV UL FOR MOBILE
 	ul.nav {
 
+		li {
+			width:180px;
+		}
+
 		ul.dropdown-menu {
 			left:0;
 			top:$nav-height - 2;
@@ -220,7 +217,13 @@ header.navbar {
 			border:none;
 			border-bottom:5px solid $secondcolor;
 
+			li {
+				padding:0 5px;
+			}
+
 			a {
+				min-width:0;
+				padding:0;
 				font-size: $font-size-small;
 				text-align: center;
 			}
@@ -252,7 +255,13 @@ header.navbar {
 	ul.nav {
 		display: block;
 
+		ul.dropdown-menu {
+			top:$nav-height - 20 !important;
+		}
+
 		li,a {
+			line-height: $nav-height - 20 !important;
+			width:100%;
 			display: block;
 		}
 
