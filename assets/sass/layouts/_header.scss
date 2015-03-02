@@ -32,7 +32,6 @@ header.navbar {
 }
 
 .header-left {
-
 	div {
 		margin:auto;
 	}
@@ -46,7 +45,6 @@ header.navbar {
 
 // THE LOGO CONTAINER AND LOGO
 .logo-container {
-	// position: relative;
 	img {
 		width:260px;
 		position: relative;
@@ -83,7 +81,9 @@ $menu-color:$primary;
 		padding:0;
 
 		// MAIN NAV ITEMS
-		li {
+		> li {
+			width:24%;
+			padding:0 5px;
 			position: relative;
 			display: inline-block;
 			box-sizing:border-box;
@@ -174,7 +174,7 @@ $menu-color:$primary;
 
 /* HEADER MEDIA QUERIES
 ---------------------------------------- */
-@media (max-width:1220px) { 
+@media (max-width:$screen-lg) { 
 
 header.navbar {
 	background:white;
@@ -189,6 +189,7 @@ header.navbar {
 
 .header_flex_child {
 	width:100%;
+	float:none;
 }
 
 .main-nav {
@@ -222,6 +223,7 @@ header.navbar {
 			}
 
 			a {
+				line-height: $nav-height - 20 !important;
 				min-width:0;
 				padding:0;
 				font-size: $font-size-small;

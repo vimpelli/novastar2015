@@ -167,7 +167,7 @@ figure.service {
 
 /* HOME PAGE MEDIA QUERIES
 ---------------------------------------- */
-@media (max-width:1200px) {
+@media (max-width:$screen-lg) {
   figure.service {
     h2 {
       font-size: 30px;
@@ -175,7 +175,7 @@ figure.service {
   }
 }
 
-@media (max-width:800px) {
+@media (max-width:$screen-md) {
 	.home-hero {
 		display:block;
 	}
@@ -184,9 +184,9 @@ figure.service {
   }
 }
 
-@media (max-width:500px) {
+@media (max-width:$screen-sm) {
   .home-tagline {
-    font-size: 30px;
+    font-size: 26px;
   }
 }
 

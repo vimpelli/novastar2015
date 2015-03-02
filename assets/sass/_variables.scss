@@ -6,33 +6,6 @@ $main-sm-columns:       $grid-columns;
 $sidebar-sm-columns:    4;
 $max-width:2000px;
 
-//** Padding between columns. Gets divided in half for the left and right.
-$grid-gutter-width:         30px;
-
-// Extra small screen / phone
-$screen-xs:                  480px;
-
-// Small screen / tablet
-$screen-sm:                  800px;
-
-// Medium screen / desktop
-$screen-md:                  1024px;
-
-// Large screen / wide desktop
-$screen-lg:                  1200px;
-
-//== Container sizes
-//
-//## Define the maximum width of `.container` for different screen sizes.
-// Small screen / tablet
-$container-tablet:             (768px + $grid-gutter-width);
-
-// Medium screen / desktop
-$container-desktop:            (1024px + $grid-gutter-width);
-
-// Large screen / wide desktop
-$container-large-desktop:      (1200px + $grid-gutter-width);
-
 
 /* COLORS
 ---------------------------------------- */
