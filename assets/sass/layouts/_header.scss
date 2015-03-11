@@ -1,23 +1,39 @@
 /* STYLESHEET FOR HEADER AND NAV
 ---------------------------------------- */
-$nav-height: 70px;
-$nav-padding: 5px;
+$nav-height: 4.5em;
+$nav-padding: $nav-height / 8;
+
+$dark: true;
+
+$nav-background:$gray-lighter; 
+@if $dark {
+
+$nav-background:$gray-darker; 
+
+}
+
+
 
 header.navbar {	
 	z-index:1000;
-	max-width:$max-width;
 	width:100%;
-	margin:0 auto;
-	padding:$nav-padding;
+	padding:$nav-padding 0;
 	position: relative;
-	background:$gray-lighter;
-	font-weight:300;
+	background:$nav-background;
 	color:$gray;
 	text-align: center;
 	height:$nav-height + ($nav-padding * 2);
-	font-size:$font-size-base;
+	margin-bottom: 5em;
+
+	@if $dark {
+		background:$gray-darker;
+		color:$gray-lighter !important; 
+	}
 
 	a {
+		@if $dark {
+			color:$gray-lighter !important; 
+		}
 		text-decoration: none;
 	}
 }
@@ -58,16 +74,6 @@ header.navbar {
 	}
 }
 
-#triangle {
-	position: relative;
-	margin:auto;
-	z-index:1;
-	margin-top:-100px;
-	width:200px;
-	height:200px;
-	background:$gray-lighter;
-	transform: matrix(1,0.3,-1,0.3,0,0);
-}
 
 $menu-color:$primary;
 
@@ -98,7 +104,7 @@ $menu-color:$primary;
 				white-space: nowrap;
 
 				&::before, &::after {
-					font-size:20px;
+					font-size:1.2em;
 					display: inline-block;
 					opacity: 0;
 					transition: transform 0.3s, opacity 0.2s;
@@ -147,13 +153,16 @@ $menu-color:$primary;
 		ul.dropdown-menu {
 			padding:0;
 			border-bottom: 5px solid $menu-color;
-			background:$gray-lighter;
+			background:$nav-background;
 			top:$nav-height;
+			font-size: 1em;
+			transition: 0.3s all !important; 
 
 			// DROPDOWN MENU ITEMS
 			a {
 				min-width: 200px;
 				margin:0;
+				// font-weight: 300;
 				text-align: left;
 				line-height: 20px;
 				padding:10px 15px;
@@ -177,14 +186,14 @@ $menu-color:$primary;
 @media (max-width:$screen-lg) { 
 
 header.navbar {
-	background:white;
+	background:$nav-background;
 	display:block;
 	height:auto;
-	padding:15px 0 0 0;
+	padding: 0;
 }
 
-#triangle {
-	display:none;
+.logo-container {
+	padding: 3em 0;
 }
 
 .header_flex_child {
@@ -193,14 +202,14 @@ header.navbar {
 }
 
 .main-nav {
+	border-top: 5px solid $primary;
 	display:block;
 	height:auto;
-	background:$gray-lighter;
-	margin-top: 30px;
+	background:$nav-background;
 	width:100%;
 
 	a { 
-		padding:0 10px;
+		padding:0 0.8em;
 		white-space: nowrap;
 	}
 	// MAIN NAV UL FOR MOBILE
@@ -212,21 +221,15 @@ header.navbar {
 
 		ul.dropdown-menu {
 			left:0;
-			top:$nav-height - 2;
 			width:100% !important;
 			min-width:150px;
 			border:none;
 			border-bottom:5px solid $secondcolor;
 
-			li {
-				padding:0 5px;
-			}
-
 			a {
-				line-height: $nav-height - 20 !important;
+				line-height: $nav-height * 0.7;
 				min-width:0;
 				padding:0;
-				font-size: $font-size-small;
 				text-align: center;
 			}
 		}
@@ -235,56 +238,45 @@ header.navbar {
 
 }
 
-@media (max-width:800px) { /* ------- 800px --------- */
+@media (max-width:$screen-md) { 
 
+	.main-nav {
+		display:block;
+		height:auto;
+		background:$nav-background;
+		width:100%;
 
-.main-nav {
-	display:block;
-	height:auto;
-	background:$gray-lighter;
-	margin-top: 30px;
-	width:100%;
-
-	li {
-		line-height: $nav-height - 20 !important;
-	}
-
-	a { 
-		white-space: nowrap;
-	}
-
-	// MAIN NAV UL FOR MOBILE
-	ul.nav {
-		display: block;
-
-		ul.dropdown-menu {
-			top:$nav-height - 20 !important;
+		a { 
+			white-space: nowrap;
 		}
 
-		li,a {
-			line-height: $nav-height - 20 !important;
-			width:100%;
+		// MAIN NAV UL FOR MOBILE
+		ul.nav {
 			display: block;
-		}
+			
+			li,a {
+				width:100%;
+				display: block;
+			}
 
-		li:nth-child(2n+0) {
-			background:$gray-lighter - 30;
+			li:nth-child(2n+0) {
+				background:$nav-background - 30;
+			}
 		}
 	}
-}
 
 }
 
-@media (max-width:800px) { /* ------- 800px --------- */
+// @media (max-width:800px) { 
 
-.logo-container {
-	padding-bottom: 30px;
+// .logo-container {
+// 	padding-bottom: 30px;
 	
-	img {
-		margin:auto;
-		position: relative;
-		z-index: 1;
-	}
-}
+// 	img {
+// 		margin:auto;
+// 		position: relative;
+// 		z-index: 1;
+// 	}
+// }
 
-}
+// }

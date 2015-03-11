@@ -1,5 +1,6 @@
 .wrap {
-	margin-top: 30px;
+	max-width:2000px;
+	margin:0 auto;
 }
 
 a {
@@ -10,8 +11,79 @@ a {
 	text-align: center;
 }
 
+.container {
+	padding:0 2em;
+}
+
+.wrapper { // Full width wrapper class
+	position: relative;
+	padding-bottom:8em;
+
+	@media (max-width:$screen-sm) {
+		padding-top:5em;
+		padding-bottom:5em;
+	}
+
+	&.top {
+		margin-top: 0;
+		padding-top: 3em;
+	}
+}
+
+.sidebar {
+	border-left: 2px solid $primary;
+	padding-left:2em !important;
+}
+
+.breadcrumb {
+	margin-bottom:4em;
+}
+
 /* TYPOGRAPHY
 ---------------------------------------- */
 p {
-	font-weight:300;
+	font-weight:400;
+}
+
+h1 {
+	font-size: 2.8em;
+}
+
+h2 {
+	font-size: 2.3em;
+}
+
+h3 {
+	font-size: 2em;
+}
+
+h4 {
+	font-size: 1.8em;
+}
+
+p,a,li,button {
+	font-size:1em;
+}
+
+body {
+	font-size: 15px;
+}
+
+body {
+
+	@media (max-width:$screen-lg) {
+		font-size: 14px;
+	}
+
+	@media (max-width:$screen-md) {
+		font-size: 15px;
+	}
+
+	@media (max-width:$screen-sm) {
+		font-size: 13px;
+	}
+
+	@media (max-width:$screen-xs) {
+		font-size: 12px;
+	}
 }

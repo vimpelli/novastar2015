@@ -12,7 +12,7 @@
   ?>
 
   <div class="wrap" role="document">
-    <main class="content container" role="main">
+    <main class="content" role="main">
       <?php include roots_template_path(); ?>
     </main>
   </div>
