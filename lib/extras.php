@@ -37,6 +37,18 @@ $args = array(
 
 register_sidebar( $args );
 
+$args = array(
+    'name'          => __( 'Pre Footer'),
+    'description'   => 'This is the area directly above the footer.',
+    'class'         => 'pre-footer-widgets',
+    'before_widget' => '<div class="light-text widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+);
+
+register_sidebar( $args );
+
 // Wrap up function for responsive image swapping from the RICG plugin 
 function imgswap($id, $size) {
 
@@ -53,6 +65,7 @@ function uploads_dir() {
 	echo esc_url(home_url()) . "/wp-content/uploads/";
 }
 
+// Create function to render breadcrumbs
 function the_breadcrumb() {
     global $post;
     echo '<ol class="breadcrumb">';
@@ -93,3 +106,8 @@ function the_breadcrumb() {
     elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
     echo '</ol>';
 }
+
+function register_my_menu() {
+  register_nav_menu('footer-menu',__( 'Footer Menu' ));
+}
+add_action( 'init', 'register_my_menu' );

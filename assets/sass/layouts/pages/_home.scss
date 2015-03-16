@@ -17,7 +17,7 @@
       z-index:-1;
     }
 
-    @media (max-width:$screen-md) {
+    @media (max-width:$screen-sm) {
       background:$nav-background - 30;
       z-index:-1;
     }
@@ -58,6 +58,15 @@ $margin: 2em; // DEFINES THE SPACE BETWEEN THE BLOCKS, AND THE SIZE OF THE BLOCK
 
 .home-tagline {
   margin-bottom: 1em;
+
+  small {
+    font-size: 2.2rem;
+    i {
+      vertical-align: -0.1em;
+      font-size: 1.2em;
+      margin:0 0.5rem;
+    }
+  }
 }
 
 .container {
@@ -74,8 +83,8 @@ $margin: 2em; // DEFINES THE SPACE BETWEEN THE BLOCKS, AND THE SIZE OF THE BLOCK
 		position: relative;
 
 		.block {
-      border-radius:1em;
-			overflow: hidden;
+      border-radius:1rem;
+			// overflow: hidden;
 			position: relative;
 			background-position:center center !important;
       background-size:cover !important;
@@ -88,11 +97,7 @@ $margin: 2em; // DEFINES THE SPACE BETWEEN THE BLOCKS, AND THE SIZE OF THE BLOCK
 
 @media (min-width:$screen-md) {
 
-  figure {
-    position: absolute;
-  }
-
-  $height: 40em;
+  $height: 51em;
 
 	.col-1 {
 		.block {
@@ -121,123 +126,87 @@ $margin: 2em; // DEFINES THE SPACE BETWEEN THE BLOCKS, AND THE SIZE OF THE BLOCK
 }
 
 
-figure {
+figure.service {
+  position: relative;
+  color:black;
   width: 100%;
   height:100%;
-  flex:1;
-  display: flex;
-  align-items:center;
-	background:rgba(169, 182, 203, 0.4);
-
-	figcaption > a {
-		z-index: 600;
-		opacity: 0;
-	}
+  border-radius:1rem;
+  background:rgba(169, 182, 203, 0.4);
 
   figcaption {
-    flex:1;
-    padding: 2em;
-    backface-visibility: hidden;
 
-    &::before, &::after {
-      pointer-events: none;
-    }
-
-    > a {
+    @media (min-width:$screen-md + 1) {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top:50%; 
+      transform: translateY(-50%);
     }
-  }
-}
 
-
-figure.service {
-  color:black;
-
-  figcaption::before {
-    z-index: 510;
-    position: absolute;
-    top: 2em;
-    right: 2em;
-    bottom: 2em;
-    left: 2em;
-    border:2px solid #fff;
-    background:rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 0 3em rgba(255, 255, 255, 0.2);
-    border-radius:1em;
-    content: '';
-    opacity: 0;
-    transition: opacity 0.35s, transform 0.35s;
-    transform: scale3d(1.4, 1.4, 1);
-
+    left:0;
+    width: 100%;
+    padding:2em;
   }
 
   h2 {
-    text-align: center;
     color:$gray-lighter;
     background:$secondcolor;
-    padding:0.8em 0 0.3em 0;
+    padding:0.8em;
     font-size: 1.8em;
     font-weight: 700;
     font-family: Lato;
   	text-transform: uppercase;
     transition: transform 0.35s;
     margin:0;
+    border-radius:1rem 1rem 0 0;
   }
 
   .box-info {
     margin:0;
     z-index: 500;
-    padding:0.5em 1em;
-    font-size: 1.2em;
+    padding:1em;
+    font-size: 1.1em;
     transition: transform 0.35s;
     background:rgba(255, 255, 255,0.8);
+    border-radius:0 0 1rem 1rem;
+
 
     li {
       margin-left: 1em;
+      @include mylist($secondcolor)
+    }
+
+    a {
+      &:hover {
+       text-decoration: none;
+      }
     }
   }
 
-  .zoom {
-    margin:0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    color:white;
-    font-size: 4em;
-    opacity: 0;
-    transition: opacity 0.35s, transform 0.35s;
-    transform: scale(2.5);
-    z-index: 520;
+  button {
+    margin-top: 1em;
   }
+}
+/*==========  LOGOS  ==========*/
 
-  &:hover {
+.logo-row {
+  padding-top:$wrapper-spacing/2;
+  position: relative;
 
-    h2,ul,p {
-      transition: opacity 0.35s, transform 0.35s;
-      transform: scale(0.9);
-    }
+  .logo {
+    height: $wrapper-spacing;
 
-    figcaption::before{
-      opacity: 1;
-      transform: scale3d(1, 1, 1);
-    }
-
-    .zoom {
-      opacity: 1;
-      // transform: scale3d(1, 1, 1);
-      transform: translate(-50%, -50%);
-    }
-
-    figcaption {
-     background-color: rgba(58, 52, 42, 0);
+    img {
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%, -50%);
+      max-width: 150px;
+      // margin:0 auto;
     }
   }
 }
+
+/*==========  VIDEO SECTION  ==========*/
 
 .video-wrapper {
   @media (min-width:$screen-sm) {
@@ -245,6 +214,7 @@ figure.service {
   }
   background:$gray-darker;
   background-image:url(#{$theme-img-root}pattern.png);
+  background-image: url(http://192.169.219.222/~novastar//wp-content/themes/novastar2015/assets/img/pattern.png);
   color:$gray-lighter;
   
   .inner {
@@ -295,6 +265,7 @@ figure.service {
 // CONTACT SECTION
 .contact-cta {
   position: relative;
+
   @media (max-width:$screen-sm) {
     margin-top: 1.5em;  
   }

@@ -1,5 +1,5 @@
 <div class="container wrapper top">
-	<h1 class="aligncenter home-tagline">Complete IT lifecycle solutions</h1>
+	<h1 class="aligncenter home-tagline">Complete Lifecycle Solutions</br><small><i class="fa fa-rotate-90 fa-angle-up"></i> for IT and calibration <i class="fa fa-rotate-270  fa-angle-up"></i></small></h1>
 	<div class="row home-hero">
 		<div class="col-md-4 col col-1">
 			<div class="block" style="background-image:url(<?php uploads_dir(); ?>calibration.jpg);">
@@ -7,49 +7,43 @@
 					<figcaption>
 						<h2>Calibration</h2>
 						<ul class="box-info">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, ipsam?</p>
-							<li>Sub Component</li>
-							<li>Sub Component</li>
-							<li>Sub Component</li>
-							<li>Sub Component</li>
+							<p>A2LA accredited instrument calibration, in our lab or at your site.</p>
+							<li>One week turn-around</li>
+							<li>Free local pickup & delivery</li>
+							<li>Highly satisfied customers</li>
+							<li>Unique Customer Portal </li>
+							<a href="<?php echo home_url(); ?>/calibration"><button type="button" class="btn btn-block btn-primary">Learn More</button></a>
 						</ul>
-						<a href="/calibration"></a>
 					</figcaption>
-					<i class="fa fa-info-circle zoom"></i>		
 				</figure>
-				<!-- <a href="#"></a> -->
 			</div>
 		</div>
 		<div class="col-md-4 col col-2">
 			<div class="block" style="background-image:url(<?php uploads_dir(); ?>newhardware.jpg);">
 				<figure class="service">
 					<figcaption>
-						<h2>New Hardware</h2>
+						<h2>New IT Hardware</h2>
 						<ul class="box-info">
-							<li>Sub Component</li>
-							<li>Sub Component</li>
-							<li>Sub Component</li>
-							<li>Sub Component</li>
+							<li>Hewlett Packard </li>
+							<li>CISCO</li>
+							<li>SGI / Nimble</li>
+							<li>CubePro 3D Printers </li>
+						<a href="<?php echo home_url(); ?>/calibration"><button type="button" class="btn btn-block btn-primary">Learn More</button></a>
 						</ul>
-						<a href="/calibration"></a>
-					</figcaption>	
-					<i class="fa fa-info-circle zoom"></i>		
+					</figcaption>
 				</figure>
-			<a href="#"></a>
 			</div>
 			<div class="block" style="background-image:url(<?php uploads_dir(); ?>printer.jpg);">
 				<figure class="service">
 					<figcaption>
 						<h2>Software</h2>
 						<ul class="box-info">
-							<li>Sub Component</li>
-							<li>Sub Component</li>
-							<li>Sub Component</li>
-							<li>Sub Component</li>
+							<li>Dassault CATIA/Simulia</li>
+							<li>Siemens NX CAD/CAE</li>
+							<li>Microsoft</li>
+						<a href="<?php echo home_url(); ?>/calibration"><button type="button" class="btn btn-block btn-primary">Learn More</button></a>
 						</ul>
-						<a href="/calibration"></a>
 					</figcaption>
-					<i class="fa fa-info-circle zoom"></i>				
 				</figure>
 			</div>
 		</div>
@@ -57,42 +51,60 @@
 			<div class="block" style="background-image:url(<?php uploads_dir(); ?>services.jpg);">
 				<figure class="service">
 					<figcaption>
-						<h2>Services</h2>
+						<h2>IT Services</h2>
 						<ul class="box-info">
-							<li>Sub Component</li>
-							<li>Sub Component</li>
+							<li>Asset Management tracking</li>
+							<li>Imaging, Installs, Repairs, Removals</li>
+						<a href="<?php echo home_url(); ?>/calibration"><button type="button" class="btn btn-block btn-primary">Learn More</button></a>
 						</ul>
-						<a href="/calibration"></a>
 					</figcaption>
-				<i class="fa fa-info-circle zoom"></i>			
 				</figure>
 			</div>
 			<div class="block" style="background-image:url(<?php uploads_dir(); ?>remarketing.jpg);">
 				<figure class="service">
 					<figcaption>
-						<h2>Re-Marketing</h2>
+						<h2>ReMarketing</h2>
 						<ul class="box-info">
-							<li>Sub Component</li>
+							<p>Recover  Value of  used IT Assets</p>
+						<a href="<?php echo home_url(); ?>/calibration"><button type="button" class="btn btn-block btn-primary">Learn More</button></a>
 						</ul>
-						<a href="/calibration"></a>
 					</figcaption>
-					<i class="fa fa-info-circle zoom"></i>			
 				</figure>
 			</div>
 			<div class="block" style="background-image:url(<?php uploads_dir(); ?>usedsales.jpg);">
 				<figure class="service">
 					<figcaption>
-						<h2>Used Sales</h2>
+						<h2>USED IT HARDWARE</h2>
 						<ul class="box-info">
-							<li>Sub Component</li>
+							<p>Play It Again PCs</p>
+						<a href="<?php echo home_url(); ?>/calibration"><button type="button" class="btn btn-block btn-primary">Learn More</button></a>
 						</ul>
-						<a href="/calibration"></a>
 					</figcaption>
-					<i class="fa fa-info-circle zoom"></i>			
 				</figure>
 			</div>
 		</div>
 	</div>
+	<div class="row logo-row">
+		<div class="col-xs-6 col-sm-4 col-md-2 logo">
+			<img class="img-responsive" src="<?php uploads_dir(); ?>piapc72.png">
+		</div>
+		<div class="col-xs-6 col-sm-4 col-md-2 logo">
+			<img class="img-responsive" src="<?php uploads_dir(); ?>dass.png">
+		</div>
+		<div class="col-xs-6 col-sm-4 col-md-2 logo">
+			<img class="img-responsive" src="<?php uploads_dir(); ?>hp.png">
+		</div>
+		<div class="col-xs-6 col-sm-4 col-md-2 logo">
+			<img class="img-responsive" src="<?php uploads_dir(); ?>sgi.png">
+		</div>
+		<div class="col-xs-6 col-sm-4 col-md-2 logo">
+			<img class="img-responsive" src="<?php uploads_dir(); ?>siemens72.png">
+		</div>
+		<div class="col-xs-6 col-sm-4 col-md-2 logo">
+			<img class="img-responsive" src="<?php uploads_dir(); ?>cisco72.png">
+		</div>
+	</div>
+	
 	<div class="triangle two"></div>
 </div>
 <div class="video-wrapper wrapper">
@@ -105,7 +117,7 @@
 			</div>
 			<div class="col-sm-7 inner">
 				<div class="video">
-					<img class="img img-responsive" src="/wp-content/uploads/placeholder.jpg">
+					<img class="img img-responsive" src="<?php uploads_dir();?>placeholder.jpg">
 				</div>
 			</div>
 		</div>

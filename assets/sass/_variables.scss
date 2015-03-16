@@ -27,7 +27,7 @@ $container-desktop:            (1024px) !default;
 
 $container-large-desktop:      (1340px) !default;
 
-
+$wrapper-spacing: 8em;
 
 
 
@@ -44,11 +44,20 @@ $primary:         #99A7BF; // light blue
 $secondcolor:     #163061; // darker blue
 $thirdcolor:      #171D2F; // darkest blue
 $fourthcolor:     #333528; // olive green
-$success:         #B0FCC1; // light green
+$cta:         #B0FCC1; // light green
 $info:            #5bc0de; // 
 $warning:         #f0ad4e;
 $danger:          #d9534f;
 $breadcrumb-bg:   $gray-lighter + 10;
+
+$linkedin:        #0976b4;
+$twitter:         #55acee;
+
+$brand-primary:         $cta - 80; // We're using this for the call to action color
+$brand-success:         #5cb85c !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #d9534f !default;
 
 
 /* TYPOGRAPHY
